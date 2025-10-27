@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AdvisorProfile from "@/components/AdvisorProfile";
 import Partners from "@/components/Partners";
@@ -7,6 +8,7 @@ import ContactFooter from "@/components/ContactFooter";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <Navbar />
       <Hero />
       <AdvisorProfile />
       <Partners />
