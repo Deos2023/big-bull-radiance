@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,10 +8,58 @@ import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     
+    // Format the message for WhatsApp
+    const whatsappMessage = `
+*New Contact Form Submission*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Message:* ${formData.message}
+
+*Sent via Big Bull Investment Website*
+    `.trim();
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/919088674067?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Optional: Reset form after submission
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
+
   const contactInfo = [
     {
       icon: Phone,
@@ -103,29 +151,80 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
+
+              {/* WhatsApp Direct CTA */}
+              <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Send className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Quick WhatsApp Message</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Send us a direct message on WhatsApp for instant response
+                    </p>
+                    <a 
+                      href="https://wa.me/919088674067"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                    >
+                      <Send className="w-4 h-4" />
+                      Message on WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form */}
             <div className="bg-card border border-border rounded-2xl p-8 animate-scale-in" style={{ animationDelay: "0.2s" }}>
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <Input placeholder="Your full name" className="w-full" />
+                  <label className="block text-sm font-medium mb-2">Name *</label>
+                  <Input 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Your full name" 
+                    className="w-full"
+                    required
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="your.email@example.com" className="w-full" />
+                  <label className="block text-sm font-medium mb-2">Email *</label>
+                  <Input 
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="your.email@example.com" 
+                    className="w-full"
+                    required
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
-                  <Input type="tel" placeholder="Your phone number" className="w-full" />
+                  <label className="block text-sm font-medium mb-2">Phone *</label>
+                  <Input 
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Your phone number" 
+                    className="w-full"
+                    required
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2">Message *</label>
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder="Tell us about your financial goals or questions..."
                     className="w-full min-h-[150px]"
+                    required
                   />
                 </div>
                 <Button 
@@ -134,8 +233,13 @@ const Contact = () => {
                   className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-[var(--glow-gold)] transition-all duration-300"
                 >
                   <Send className="w-4 h-4 mr-2" />
-                  Send Message
+                  Send via WhatsApp
                 </Button>
+                
+                {/* Form Note */}
+                <p className="text-xs text-muted-foreground text-center">
+                  By clicking "Send via WhatsApp", you'll be redirected to WhatsApp to send your message directly to our advisor.
+                </p>
               </form>
             </div>
           </div>

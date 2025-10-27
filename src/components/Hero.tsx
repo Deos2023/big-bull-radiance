@@ -8,14 +8,14 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Image Background with Mobile Optimization */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed"
+        style={{
           backgroundImage: `url(${heroImg})`,
-          // Mobile-first background approach
-          backgroundAttachment: 'scroll', // Remove fixed on mobile for better performance
+          // Use object-fit approach for better mobile control
           backgroundSize: 'cover',
-          backgroundPosition: 'center center'
-
+          backgroundPosition: 'center center',
+          // Ensure it covers the full height on mobile
+          minHeight: '100vh'
         }}
       >
         {/* Enhanced Overlay for Better Readability */}
@@ -31,14 +31,20 @@ const Hero = () => {
               style={{ animationDelay: "1s" }}
             />
             {/* Additional mobile-only element */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/10 rounded-full blur-xl md:hidden animate-float" style={{ animationDelay: "0.5s" }} />
+            <div
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/10 rounded-full blur-xl md:hidden animate-float"
+              style={{ animationDelay: "0.5s" }}
+            />
           </div>
         </div>
       </div>
 
       {/* Bull Silhouette - Responsive Sizing */}
       <div className="absolute right-2 top-1/4 opacity-10 md:opacity-15 animate-pulse-glow md:right-10">
-        <TrendingUp className="w-48 h-48 md:w-96 md:h-96 text-accent" strokeWidth={0.5} />
+        <TrendingUp
+          className="w-48 h-48 md:w-96 md:h-96 text-accent"
+          strokeWidth={0.5}
+        />
       </div>
 
       {/* Content */}
@@ -71,7 +77,8 @@ const Hero = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <p className="text-sm sm:text-base md:text-xl text-accent font-semibold backdrop-blur-sm bg-black/20 px-4 py-2 md:px-6 md:py-3 rounded-full text-center">
-              Mutual Funds | Health Insurance <span className="block sm:inline">| Financial Planning</span>
+              Mutual Funds | Health Insurance{" "}
+              <span className="block sm:inline">| Financial Planning</span>
             </p>
             <div className="h-1 w-24 md:w-32 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full" />
           </div>
@@ -90,7 +97,10 @@ const Hero = () => {
                 Call: 9088674067
               </Button>
             </a>
-            <a href="mailto:biswasfinancial@gmail.com" className="w-full sm:w-auto">
+            <a
+              href="mailto:biswasfinancial@gmail.com"
+              className="w-full sm:w-auto"
+            >
               <Button
                 size="lg"
                 variant="outline"
@@ -103,7 +113,10 @@ const Hero = () => {
           </div>
 
           {/* Additional Mobile-Only Info */}
-          <div className="mt-8 md:hidden animate-fade-in" style={{ animationDelay: "0.8s" }}>
+          <div
+            className="mt-8 md:hidden animate-fade-in"
+            style={{ animationDelay: "0.8s" }}
+          >
             <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto">
               <div className="text-center p-2 bg-white/5 rounded-lg border border-white/10">
                 <div className="text-accent font-bold text-sm">8+ Years</div>
@@ -118,8 +131,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom Gradient Overlay - Enhanced for Mobile */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+      {/* Minimal Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-black/40 to-transparent md:h-32 md:from-black/70" />
 
       {/* Scroll Indicator for Desktop */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block animate-bounce">
