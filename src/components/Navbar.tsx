@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-
+  const navigate = useNavigate();
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
@@ -54,7 +54,7 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-[var(--glow-gold)] transition-all duration-300">
+            <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-[var(--glow-gold)] transition-all duration-300" onClick={()=>{navigate("/contact") }}>
               Get Started
             </Button>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent">
+            <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent" onClick={()=>{navigate("/contact") }}>
               Get Started
             </Button>
           </div>

@@ -1,9 +1,17 @@
 import Navbar from "@/components/Navbar";
-import ContactFooter from "@/components/ContactFooter";
+// import ContactFooter from "@/components/ContactFooter";
 import { TrendingUp, Shield, PiggyBank, FileText, Heart, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImg from "@/assets/heroImg2.jpg";
+import bgImg from "@/assets/advisor.jpg";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const services = [
     {
       icon: TrendingUp,
@@ -86,14 +94,14 @@ const Services = () => {
     "SBI Mutual Fund",
     "STAR Health Insurance",
   ];
-
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--gradient-primary)]" />
+      <section className="pt-32 pb-20 px-4 relative overflow-hidden bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${heroImg})` }}>
+        <div className="absolute inset-0 bg-black/80" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float" />
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
@@ -134,7 +142,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors" onClick={()=>{navigate("/contact") }}>
                   Learn More
                 </Button>
               </div>
@@ -144,8 +152,9 @@ const Services = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 px-4 bg-card/50">
-        <div className="container mx-auto">
+      <section className="py-20 px-4 bg-card/50 relative bg-fixed bg-center bg-cover" style={{backgroundImage:`url(${bgImg})`}}>
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="container mx-auto z-10 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Trusted Partners</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -186,7 +195,7 @@ const Services = () => {
         </div>
       </section>
 
-      <ContactFooter />
+      <Footer />
     </div>
   );
 };

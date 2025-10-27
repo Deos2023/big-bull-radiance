@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
+import { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
   const contactInfo = [
     {
       icon: Phone,
@@ -160,7 +166,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <ContactFooter />
+      <Footer />
     </div>
   );
 };
