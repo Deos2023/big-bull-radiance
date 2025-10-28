@@ -52,7 +52,7 @@ const Partners = () => {
                 and insurance providers in India
               </p>
               <p className="text-sm md:text-base text-white/80 text-center mt-3">
-                Financial partners... 47
+                Financial partners 47
               </p>
             </div>
 
