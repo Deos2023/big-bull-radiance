@@ -5,13 +5,13 @@ import { Shield, Award, Users, CheckCircle } from "lucide-react";
 
 const Partners = () => {
   return (
-    <section 
+    <section
       className="py-12 md:py-20 px-4 sm:px-6 relative overflow-hidden bg-center bg-cover bg-fixed"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* Enhanced Overlay with Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background/75 via-background/90 to-accent/20" />
-      
+
       {/* Additional Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[length:40px_40px]" />
 
@@ -19,14 +19,17 @@ const Partners = () => {
         <div className="text-center mb-12 md:mb-16 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 mb-4 md:mb-6 px-4 py-2 md:px-6 md:py-3 bg-accent/10 rounded-full border border-accent/20 backdrop-blur-sm">
             <Award className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-            <span className="text-accent font-semibold text-sm md:text-base">Authorized Partner</span>
+            <span className="text-accent font-semibold text-sm md:text-base">
+              Authorized Partner
+            </span>
           </div>
-          
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-white">
             Trusted Partnerships
           </h2>
           <p className="text-base md:text-xl text-white/80 max-w-2xl mx-auto">
-            Collaborating with India's premier financial institutions to bring you the best investment and insurance solutions Financial partners... 47
+            Collaborating with India's premier financial institutions to bring
+            you the best investment and insurance solutions
           </p>
           <div className="h-1 w-16 md:w-24 bg-accent mx-auto mt-4 md:mt-6 rounded-full" />
         </div>
@@ -48,12 +51,15 @@ const Partners = () => {
                 Certified distributor and advisor for top mutual fund companies
                 and insurance providers in India
               </p>
+              <p className="text-sm md:text-base text-white/80 text-center mt-3">
+                Financial partners... 47
+              </p>
             </div>
 
             {/* Partner Image with Enhanced Container */}
             <div className="relative rounded-xl md:rounded-3xl overflow-hidden border-2 border-white/20 bg-black/30 p-3 md:p-4 mb-8 md:mb-12 shadow-2xl pb-10 md:pb-12">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl" />
-              
+
               <img
                 src={partnerImg}
                 alt="Official Partners - HDFC Mutual Fund, HSBC Mutual Fund, TATA Mutual Fund, SBI Mutual Fund, STAR Health Insurance"
@@ -61,8 +67,8 @@ const Partners = () => {
                 loading="lazy"
                 decoding="async"
                 style={{
-                  imageRendering: '-webkit-optimize-contrast',
-                  transform: 'translateZ(0)'
+                  imageRendering: "-webkit-optimize-contrast",
+                  transform: "translateZ(0)",
                 }}
               />
 
@@ -78,7 +84,9 @@ const Partners = () => {
               <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex gap-4">
                 <div className="bg-accent text-white px-3 py-1 md:px-4 md:py-2 rounded-full shadow-lg flex items-center gap-2">
                   <Users className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="text-xs md:text-sm font-semibold">500+ Clients Served</span>
+                  <span className="text-xs md:text-sm font-semibold">
+                    500+ Clients Served
+                  </span>
                 </div>
               </div>
             </div>
@@ -88,20 +96,44 @@ const Partners = () => {
               <h4 className="text-xl md:text-2xl font-bold text-white text-center mb-2 md:mb-3">
                 Our Premier Partners
               </h4>
-              <p className="text-sm md:text-base text-white/80 text-center mb-6 md:mb-8">(Financial partners... 47)</p>
+              <p className="text-sm md:text-base text-white/80 text-center mb-6 md:mb-8">
+                (Financial partners... 47)
+              </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                 {[
-                  { name: "HDFC Mutual Fund", initial: "H", color: "from-red-500 to-red-700" },
-                  { name: "HSBC Mutual Fund", initial: "H", color: "from-red-600 to-red-800" },
-                  { name: "TATA Mutual Fund", initial: "T", color: "from-blue-500 to-blue-700" },
-                  { name: "SBI Mutual Fund", initial: "S", color: "from-blue-600 to-blue-800" },
-                  { name: "STAR Health Insurance", initial: "S", color: "from-purple-500 to-purple-700" },
+                  {
+                    name: "HDFC Mutual Fund",
+                    initial: "H",
+                    color: "from-red-500 to-red-700",
+                  },
+                  {
+                    name: "HSBC Mutual Fund",
+                    initial: "H",
+                    color: "from-red-600 to-red-800",
+                  },
+                  {
+                    name: "TATA Mutual Fund",
+                    initial: "T",
+                    color: "from-blue-500 to-blue-700",
+                  },
+                  {
+                    name: "SBI Mutual Fund",
+                    initial: "S",
+                    color: "from-blue-600 to-blue-800",
+                  },
+                  {
+                    name: "STAR Health Insurance",
+                    initial: "S",
+                    color: "from-purple-500 to-purple-700",
+                  },
                 ].map((partner, index) => (
                   <div
                     key={partner.name}
                     className="group text-center p-4 md:p-6 bg-white/5 rounded-xl md:rounded-2xl border border-white/10 hover:border-accent/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 backdrop-blur-sm"
                   >
-                    <div className={`w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-xl md:rounded-2xl bg-gradient-to-br ${partner.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                    <div
+                      className={`w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-xl md:rounded-2xl bg-gradient-to-br ${partner.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                    >
                       <span className="text-lg md:text-xl font-bold text-white">
                         {partner.initial}
                       </span>
@@ -144,11 +176,15 @@ const Partners = () => {
               </div>
             </div>
             <p className="text-white/90 leading-relaxed text-sm md:text-lg">
-              As an authorized mutual fund distributor and insurance advisor with 
-              <span className="text-accent font-semibold"> 22+ years of experience</span>, 
-              we provide direct access to India's most trusted financial products 
-              with complete transparency, personalized guidance, and dedicated 
-              customer support.
+              As an authorized mutual fund distributor and insurance advisor
+              with
+              <span className="text-accent font-semibold">
+                {" "}
+                22+ years of experience
+              </span>
+              , we provide direct access to India's most trusted financial
+              products with complete transparency, personalized guidance, and
+              dedicated customer support.
             </p>
           </Card>
         </div>
