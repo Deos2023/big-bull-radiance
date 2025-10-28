@@ -119,7 +119,7 @@ const Hero = () => {
           >
             <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto">
               <div className="text-center p-2 bg-white/5 rounded-lg border border-white/10">
-                <div className="text-accent font-bold text-sm">8+ Years</div>
+                <div className="text-accent font-bold text-sm">22+ Years</div>
                 <div className="text-white/70 text-xs">Experience</div>
               </div>
               <div className="text-center p-2 bg-white/5 rounded-lg border border-white/10">

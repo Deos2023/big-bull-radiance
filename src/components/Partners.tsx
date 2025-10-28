@@ -144,7 +144,7 @@ const Partners = () => {
             </div>
             <p className="text-white/90 leading-relaxed text-sm md:text-lg">
               As an authorized mutual fund distributor and insurance advisor with 
-              <span className="text-accent font-semibold"> 8+ years of experience</span>, 
+              <span className="text-accent font-semibold"> 22+ years of experience</span>, 
               we provide direct access to India's most trusted financial products 
               with complete transparency, personalized guidance, and dedicated 
               customer support.

@@ -42,7 +42,7 @@ const About = () => {
 
   const achievements = [
     { icon: Users, count: "250+", label: "Satisfied Clients" },
-    { icon: Award, count: "8+", label: "Years of Excellence" },
+    { icon: Award, count: "22+", label: "Years of Excellence" },
     { icon: TrendingUp, count: "50+", label: "Investment Plans" },
     { icon: Shield, count: "100+", label: "Health Policies" },
   ];
@@ -123,7 +123,7 @@ const About = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="text-center p-4 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
-                <div className="text-2xl font-bold text-accent mb-2">8+</div>
+                <div className="text-2xl font-bold text-accent mb-2">22+</div>
                 <div className="text-white/80 text-sm">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-accent/30 transition-all duration-300">
@@ -332,7 +332,7 @@ const About = () => {
                       />
                       {/* Experience Badge */}
                       <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-2 rounded-full font-semibold shadow-lg">
-                        8+ Years Experience
+                        22+ Years Experience
                       </div>
                     </div>
                   </div>

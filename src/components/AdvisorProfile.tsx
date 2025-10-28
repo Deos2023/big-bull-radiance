@@ -34,7 +34,7 @@ const AdvisorProfile = () => {
                   <div className="flex items-center justify-between gap-2 sm:gap-4">
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-yellow-500" />
-                      <span className="font-semibold text-foreground text-xs sm:text-sm">8+ Years</span>
+                      <span className="font-semibold text-foreground text-xs sm:text-sm">22+ Years</span>
                     </div>
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
@@ -90,7 +90,7 @@ const AdvisorProfile = () => {
                 <div className="p-4 md:p-6 bg-accent/5 rounded-xl md:rounded-2xl border border-accent/20">
                   <h4 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">Professional Expertise</h4>
                   <p className="text-foreground/90 leading-relaxed text-sm md:text-base">
-                    With over 8 years of expertise in financial planning and wealth management, 
+                    With over 22 years of expertise in financial planning and wealth management, 
                     I help individuals and families secure their financial future through strategic 
                     investment planning and comprehensive health insurance solutions.
                   </p>
@@ -103,7 +103,7 @@ const AdvisorProfile = () => {
                     <div className="text-xs md:text-sm text-muted-foreground">Happy Clients</div>
                   </div>
                   <div className="text-center p-3 md:p-4 bg-background/50 rounded-lg md:rounded-xl border border-accent/10">
-                    <div className="text-xl md:text-2xl font-bold text-accent mb-1">8+</div>
+                    <div className="text-xl md:text-2xl font-bold text-accent mb-1">22+</div>
                     <div className="text-xs md:text-sm text-muted-foreground">Years Experience</div>
                   </div>
                 </div>
