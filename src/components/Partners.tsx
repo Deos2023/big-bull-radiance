@@ -26,7 +26,7 @@ const Partners = () => {
             Trusted Partnerships
           </h2>
           <p className="text-base md:text-xl text-white/80 max-w-2xl mx-auto">
-            Collaborating with India's premier financial institutions to bring you the best investment and insurance solutions
+            Collaborating with India's premier financial institutions to bring you the best investment and insurance solutions Financial partners... 47
           </p>
           <div className="h-1 w-16 md:w-24 bg-accent mx-auto mt-4 md:mt-6 rounded-full" />
         </div>
@@ -85,9 +85,10 @@ const Partners = () => {
 
             {/* Enhanced Partner Grid */}
             <div className="mb-8 md:mb-12">
-              <h4 className="text-xl md:text-2xl font-bold text-white text-center mb-6 md:mb-8">
+              <h4 className="text-xl md:text-2xl font-bold text-white text-center mb-2 md:mb-3">
                 Our Premier Partners
               </h4>
+              <p className="text-sm md:text-base text-white/80 text-center mb-6 md:mb-8">(Financial partners... 47)</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                 {[
                   { name: "HDFC Mutual Fund", initial: "H", color: "from-red-500 to-red-700" },
