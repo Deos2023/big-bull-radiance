@@ -93,6 +93,14 @@ const Services = () => {
     "TATA Mutual Fund",
     "SBI Mutual Fund",
     "STAR Health Insurance",
+    "Care Health Insurance",
+    "Axis Mutual Fund",
+    "DSP Mutual Fund",
+    "Invesco Mutual Fund",
+    "ICICI Mutual Fund",
+    "Nippon Mutual Fund",
+    "UTI Mutual Fund",
+    "Kotak Mutual Fund",
   ];
   const navigate = useNavigate();
   return (

@@ -104,27 +104,67 @@ const Partners = () => {
                   {
                     name: "HDFC Mutual Fund",
                     initial: "H",
-                    color: "from-red-500 to-red-700",
+                    color: "from-blue-600 to-indigo-700",
                   },
                   {
                     name: "HSBC Mutual Fund",
                     initial: "H",
-                    color: "from-red-600 to-red-800",
+                    color: "from-red-600 to-rose-700",
                   },
                   {
-                    name: "TATA Mutual Fund",
+                    name: "Tata Mutual Fund",
                     initial: "T",
-                    color: "from-blue-500 to-blue-700",
+                    color: "from-blue-500 to-cyan-600",
                   },
                   {
                     name: "SBI Mutual Fund",
                     initial: "S",
-                    color: "from-blue-600 to-blue-800",
+                    color: "from-blue-700 to-navy-800",
                   },
                   {
-                    name: "STAR Health Insurance",
+                    name: "Star Health Insurance",
                     initial: "S",
-                    color: "from-purple-500 to-purple-700",
+                    color: "from-green-500 to-emerald-600",
+                  },
+                  {
+                    name: "Care Health Insurance",
+                    initial: "C",
+                    color: "from-teal-500 to-cyan-600",
+                  },
+                  {
+                    name: "Axis Mutual Fund",
+                    initial: "A",
+                    color: "from-purple-600 to-violet-700",
+                  },
+                  {
+                    name: "DSP Mutual Fund",
+                    initial: "D",
+                    color: "from-orange-500 to-amber-600",
+                  },
+                  {
+                    name: "Invesco Mutual Fund",
+                    initial: "I",
+                    color: "from-slate-600 to-gray-700",
+                  },
+                  {
+                    name: "ICICI Mutual Fund",
+                    initial: "I",
+                    color: "from-indigo-500 to-purple-600",
+                  },
+                  {
+                    name: "Nippon India Mutual Fund",
+                    initial: "N",
+                    color: "from-rose-500 to-pink-600",
+                  },
+                  {
+                    name: "UTI Mutual Fund",
+                    initial: "U",
+                    color: "from-amber-500 to-yellow-600",
+                  },
+                  {
+                    name: "Kotak Mutual Fund",
+                    initial: "K",
+                    color: "from-lime-500 to-green-600",
                   },
                 ].map((partner, index) => (
                   <div
