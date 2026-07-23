@@ -95,8 +95,8 @@ const Footer = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about" },
                 { name: "Services", href: "/services" },
+                { name: "Gallery", href: "/gallery" },
                 { name: "Contact", href: "/contact" },
-                { name: "Partners", href: "/partners" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -177,11 +177,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-accent/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-foreground/60 text-sm">
-            © 2024 Big Bull Investment. All rights reserved. Designed with ❤️ by{" "}
-            <span className="text-accent">
-              Digital Exposure Online Services
-            </span>
-            .
+            © 2026 Big Bull Investment. Designed & Developed ❤️ by{" "}
+            <a
+              href="https://www.teamdeoskolkata.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:text-red-700 transition-colors duration-300 ml-1"
+            >
+              Digital Exposure Online Service 
+            </a>.
           </p>
           <div className="flex gap-6 text-sm">
             <a
