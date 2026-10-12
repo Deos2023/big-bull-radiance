@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/heroImg2.jpg";
 import { Phone, ArrowRight, Camera } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const GalleryPage = () => {
   const navigate = useNavigate();
@@ -16,6 +17,12 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <SEO
+        title="Investor Seminars & Video Gallery | Big Bull Investment Kolkata & Howrah"
+        description="Explore photo and video highlights from investor awareness seminars, client felicitation events, and educational market sessions hosted by Big Bull Investment in Kolkata."
+        keywords="investor awareness seminars kolkata, financial planning gallery, mutual fund event photos, ujjal biswas seminars howrah, investment videos kolkata"
+        canonicalPath="/gallery"
+      />
       <Navbar />
 
       {/* Hero Section */}
@@ -36,11 +43,11 @@ const GalleryPage = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
-            Our Photo <span className="text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Gallery</span>
+            Photos & <span className="text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Videos</span> Gallery
           </h1>
 
           <p className="text-xl text-slate-300 animate-fade-in-up max-w-2xl mx-auto leading-relaxed">
-            Witness our commitment, client seminars, community engagement, and team milestones celebrating trust and financial excellence.
+            Witness our commitment, client seminars, educational videos, community engagement, and team milestones celebrating trust and financial excellence.
           </p>
         </div>
       </section>

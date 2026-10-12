@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -21,6 +22,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO
+        title="Big Bull Investment | Top Mutual Fund Distributor & Health Insurance in Kolkata & Howrah"
+        description="Big Bull Investment (Ujjal Biswas) is a premier AMFI-Registered Mutual Fund Distributor & Health Insurance Mediclaim Advisor serving Kolkata and Howrah. Over 22 years of trusted experience. Call 9088674067."
+        keywords="mutual fund distributor kolkata, mutual fund advisor howrah, best sip consultant kolkata, health insurance advisor kolkata, mediclaim consultant howrah, ujjal biswas financial advisor, big bull investment"
+        canonicalPath="/"
+      />
       <Navbar />
       <Hero />
       <AdvisorProfile />

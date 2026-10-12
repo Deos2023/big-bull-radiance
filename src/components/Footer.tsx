@@ -41,9 +41,7 @@ const Footer = () => {
             </div>
 
             <p className="text-foreground/80 mb-6 leading-relaxed max-w-md">
-              Your trusted financial partner for mutual funds and health
-              insurance solutions. With expert guidance and personalized
-              service, we help you secure your financial future.
+              Your trusted partner for mutual funds and health insurance solutions across Kolkata and Howrah. With over 22 years of personalized fiduciary guidance, we help you build enduring wealth and health protection.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">
@@ -64,7 +62,10 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61592699578094"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Big Bull Investment on Facebook"
                 className="w-10 h-10 bg-accent/10 hover:bg-accent/20 border border-accent/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[var(--glow-gold)] group"
               >
                 <Facebook className="w-4 h-4 text-accent group-hover:text-white transition-colors" />
@@ -158,9 +159,9 @@ const Footer = () => {
                   <p className="text-sm">
                     105/1 Bidhan Nagar Road, Block A
                     <br />
-                    Above ICICI Bank
+                    Above ICICI Bank, Kolkata 700067
                     <br />
-                    Kolkata 700067
+                    <span className="text-xs text-accent font-medium">Serving Kolkata, Howrah & West Bengal</span>
                   </p>
                 </div>
               </div>
@@ -187,25 +188,25 @@ const Footer = () => {
               Digital Exposure Online Service 
             </a>.
           </p>
-          <div className="flex gap-6 text-sm">
-            <a
-              href="#"
+          <div className="flex flex-wrap gap-6 text-sm">
+            <Link
+              to="/privacy-policy"
               className="text-foreground/60 hover:text-accent transition-colors"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/terms-of-service"
               className="text-foreground/60 hover:text-accent transition-colors"
             >
               Terms of Service
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/disclaimer"
               className="text-foreground/60 hover:text-accent transition-colors"
             >
               Disclaimer
-            </a>
+            </Link>
           </div>
         </div>
       </div>

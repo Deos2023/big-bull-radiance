@@ -7,6 +7,7 @@ import bgImg from "@/assets/advisor.jpg";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Services = () => {
    useEffect(() => {
@@ -105,6 +106,12 @@ const Services = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Mutual Fund & Health Insurance Services in Kolkata & Howrah | Big Bull Investment"
+        description="Comprehensive financial advisory in Kolkata & Howrah: Mutual Fund Distribution, Systematic Investment Plans (SIP), Health Insurance & Mediclaim, Retirement Planning, and Tax Saving (ELSS)."
+        keywords="mutual fund services kolkata, sip planning howrah, health insurance advisor bidhan nagar, mediclaim consultant kolkata, tax saving elss west bengal"
+        canonicalPath="/services"
+      />
       <Navbar />
       
       {/* Hero Section */}

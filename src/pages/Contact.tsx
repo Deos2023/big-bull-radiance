@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   useEffect(() => {
@@ -76,7 +77,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "105/1 Bidhan Nagar Road, Block A (Above ICICI Bank), Kolkata 700067",
+      content: "105/1 Bidhan Nagar Road, Block A (Above ICICI Bank), Kolkata 700067 • Serving Kolkata & Howrah",
       action: null,
     },
     {
@@ -89,6 +90,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Big Bull Investment | Advisor in Kolkata & Howrah (9088674067)"
+        description="Get in touch with Big Bull Investment (Ujjal Biswas) for free financial consultation. Office: 105/1 Bidhan Nagar Road, Kolkata 700067. Call or WhatsApp 9088674067."
+        keywords="contact big bull investment, financial advisor phone kolkata, mutual fund office bidhan nagar, mediclaim advisor contact howrah, ujjal biswas appointment"
+        canonicalPath="/contact"
+      />
       <Navbar />
       
       {/* Hero Section */}

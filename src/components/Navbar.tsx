@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" aria-label="Big Bull Investment Home" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse-glow" />
               <div className="relative bg-gradient-to-br from-primary to-accent p-3 rounded-xl shadow-lg group-hover:shadow-[var(--glow-gold)] transition-all duration-300">
@@ -30,9 +30,9 @@ const Navbar = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent block">
                 Big Bull
-              </h1>
+              </span>
               <p className="text-xs text-muted-foreground">Investment Solutions</p>
             </div>
           </Link>

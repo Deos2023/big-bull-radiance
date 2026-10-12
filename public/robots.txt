@@ -1,7 +1,25 @@
+# Robots.txt for Big Bull Investment (Big Bull Radiance)
+# Target Location: Kolkata, Howrah, West Bengal, India
+# Website: https://www.bigbullinvestment.online
+
+User-agent: *
+Allow: /
+Disallow: /dist/
+Disallow: /node_modules/
+
+# Major Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /Gallery/
+Allow: /assets/
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Twitterbot
@@ -10,5 +28,6 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Sitemap Index Directive
+Sitemap: https://www.bigbullinvestment.online/sitemap.xml
+Host: https://www.bigbullinvestment.online

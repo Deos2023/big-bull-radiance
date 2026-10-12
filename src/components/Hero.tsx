@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 mb-4 md:mb-6 mt-4 md:mt-10 px-4 py-2 md:px-6 md:py-3 bg-accent/10 rounded-full border border-accent/20 backdrop-blur-sm">
             <Shield className="w-4 h-4 md:w-5 md:h-5 text-accent animate-glow" />
             <span className="text-accent font-semibold text-sm md:text-base">
-              Trusted Financial Partner
+              Trusted Financial Partner • Kolkata & Howrah
             </span>
           </div>
 
@@ -68,7 +68,7 @@ const Hero = () => {
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-6 md:mb-8 animate-fade-in px-4"
             style={{ animationDelay: "0.2s" }}
           >
-            Your Gateway to Wealth & Wellness
+            Your Gateway to Wealth & Wellness in Kolkata & Howrah
           </p>
 
           {/* Services */}
@@ -78,7 +78,7 @@ const Hero = () => {
           >
             <p className="text-sm sm:text-base md:text-xl text-accent font-semibold backdrop-blur-sm bg-black/20 px-4 py-2 md:px-6 md:py-3 rounded-full text-center">
               Mutual Funds | Health Insurance{" "}
-              <span className="block sm:inline">| Financial Planning</span>
+              <span className="block sm:inline">| Wealth Planning (Kolkata & Howrah)</span>
             </p>
             <div className="h-1 w-24 md:w-32 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full" />
           </div>

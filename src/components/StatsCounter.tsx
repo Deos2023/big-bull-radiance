@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Users, Calendar, TrendingUp, Heart } from "lucide-react";
+import { Users, Calendar, TrendingUp, Heart, LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Stat {
-  icon: any;
+  icon: LucideIcon;
   value: number;
   label: string;
   suffix: string;

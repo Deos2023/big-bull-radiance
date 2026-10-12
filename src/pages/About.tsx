@@ -15,6 +15,8 @@ import aboutImg from "@/assets/about1.jpeg";
 import heroImg from "@/assets/heroImg.jpg";
 import aboutImg2 from "@/assets/about2.jpeg";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
+
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,6 +51,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Ujjal Biswas | Big Bull Investment Advisor in Kolkata & Howrah"
+        description="Learn about Ujjal Biswas, lead advisor at Big Bull Investment with 22+ years of expertise. AMFI Registered Mutual Fund Distributor & Mediclaim Consultant in Kolkata & Howrah."
+        keywords="about ujjal biswas, financial advisor kolkata, mutual fund distributor howrah, mediclaim consultant bidhan nagar, wealth advisor west bengal"
+        canonicalPath="/about"
+      />
       <Navbar />
 
       {/* Hero Section */}
@@ -219,7 +227,9 @@ const About = () => {
                   {/* Main Profile Image */}
                   <img
                     src={aboutImg}
-                    alt="Ujjal Biswas - Financial Advisor"
+                    alt="Ujjal Biswas - Lead Financial Advisor & Mutual Fund Distributor Kolkata and Howrah"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
@@ -327,7 +337,9 @@ const About = () => {
                     <div className="w-64 h-64 relative">
                       <img
                         src={aboutImg2}
-                        alt="Ujjal Biswas - Financial Advisor"
+                        alt="Ujjal Biswas - Over 22 Years of Investment & Mediclaim Advisory in Kolkata and Howrah"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover rounded-2xl border-4 border-accent/20 shadow-2xl"
                       />
                       {/* Experience Badge */}

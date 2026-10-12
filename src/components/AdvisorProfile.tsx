@@ -77,7 +77,7 @@ const AdvisorProfile = () => {
                     <span className="font-semibold text-foreground">Office Address:</span><br />
                     105/1 Bidhan Nagar Road, Block A (Above ICICI Bank)
                     <br />
-                    <span className="text-accent font-semibold">Kolkata 700067</span>
+                    <span className="text-accent font-semibold">Kolkata 700067 • Serving Kolkata & Howrah</span>
                   </p>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const AdvisorProfile = () => {
                   <h4 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">Professional Expertise</h4>
                   <p className="text-foreground/90 leading-relaxed text-sm md:text-base">
                     With over 22 years of expertise in financial planning and wealth management, 
-                    I help individuals and families secure their financial future through strategic 
+                    I help individuals and families across Kolkata and Howrah secure their financial future through strategic 
                     investment planning and comprehensive health insurance solutions.
                   </p>
                 </div>

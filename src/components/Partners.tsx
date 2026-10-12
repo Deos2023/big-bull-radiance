@@ -2,6 +2,21 @@ import { Card } from "@/components/ui/card";
 import partnerImg from "@/assets/partner1.jpeg";
 import bgImg from "@/assets/heroImg1.jpg";
 import { Shield, Award, Users, CheckCircle } from "lucide-react";
+import {
+  HdfcLogo,
+  HsbcLogo,
+  TataLogo,
+  SbiLogo,
+  StarHealthLogo,
+  CareHealthLogo,
+  AxisLogo,
+  DspLogo,
+  InvescoLogo,
+  IciciLogo,
+  NipponLogo,
+  UtiLogo,
+  KotakLogo,
+} from "./PartnerLogos";
 
 const Partners = () => {
   return (
@@ -62,7 +77,7 @@ const Partners = () => {
 
               <img
                 src={partnerImg}
-                alt="Official Partners - HDFC Mutual Fund, HSBC Mutual Fund, TATA Mutual Fund, SBI Mutual Fund, STAR Health Insurance"
+                alt="Official Financial Partners - HDFC, HSBC, TATA, SBI Mutual Funds, Star Health & Care Insurance in Kolkata and Howrah"
                 className="relative w-full h-auto rounded-lg md:rounded-xl shadow-2xl object-contain max-h-[300px] md:max-h-[500px] mx-auto"
                 loading="lazy"
                 decoding="async"
@@ -101,82 +116,26 @@ const Partners = () => {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                 {[
-                  {
-                    name: "HDFC Mutual Fund",
-                    initial: "H",
-                    color: "from-blue-600 to-indigo-700",
-                  },
-                  {
-                    name: "HSBC Mutual Fund",
-                    initial: "H",
-                    color: "from-red-600 to-rose-700",
-                  },
-                  {
-                    name: "Tata Mutual Fund",
-                    initial: "T",
-                    color: "from-blue-500 to-cyan-600",
-                  },
-                  {
-                    name: "SBI Mutual Fund",
-                    initial: "S",
-                    color: "from-blue-700 to-navy-800",
-                  },
-                  {
-                    name: "Star Health Insurance",
-                    initial: "S",
-                    color: "from-green-500 to-emerald-600",
-                  },
-                  {
-                    name: "Care Health Insurance",
-                    initial: "C",
-                    color: "from-teal-500 to-cyan-600",
-                  },
-                  {
-                    name: "Axis Mutual Fund",
-                    initial: "A",
-                    color: "from-purple-600 to-violet-700",
-                  },
-                  {
-                    name: "DSP Mutual Fund",
-                    initial: "D",
-                    color: "from-orange-500 to-amber-600",
-                  },
-                  {
-                    name: "Invesco Mutual Fund",
-                    initial: "I",
-                    color: "from-slate-600 to-gray-700",
-                  },
-                  {
-                    name: "ICICI Mutual Fund",
-                    initial: "I",
-                    color: "from-indigo-500 to-purple-600",
-                  },
-                  {
-                    name: "Nippon India Mutual Fund",
-                    initial: "N",
-                    color: "from-rose-500 to-pink-600",
-                  },
-                  {
-                    name: "UTI Mutual Fund",
-                    initial: "U",
-                    color: "from-amber-500 to-yellow-600",
-                  },
-                  {
-                    name: "Kotak Mutual Fund",
-                    initial: "K",
-                    color: "from-lime-500 to-green-600",
-                  },
-                ].map((partner, index) => (
+                  { name: "HDFC Mutual Fund", Logo: HdfcLogo },
+                  { name: "HSBC Mutual Fund", Logo: HsbcLogo },
+                  { name: "Tata Mutual Fund", Logo: TataLogo },
+                  { name: "SBI Mutual Fund", Logo: SbiLogo },
+                  { name: "Star Health Insurance", Logo: StarHealthLogo },
+                  { name: "Care Health Insurance", Logo: CareHealthLogo },
+                  { name: "Axis Mutual Fund", Logo: AxisLogo },
+                  { name: "DSP Mutual Fund", Logo: DspLogo },
+                  { name: "Invesco Mutual Fund", Logo: InvescoLogo },
+                  { name: "ICICI Mutual Fund", Logo: IciciLogo },
+                  { name: "Nippon India Mutual Fund", Logo: NipponLogo },
+                  { name: "UTI Mutual Fund", Logo: UtiLogo },
+                  { name: "Kotak Mutual Fund", Logo: KotakLogo },
+                ].map((partner) => (
                   <div
                     key={partner.name}
-                    className="group text-center p-4 md:p-6 bg-white/5 rounded-xl md:rounded-2xl border border-white/10 hover:border-accent/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 backdrop-blur-sm"
+                    className="group text-center p-4 md:p-6 bg-white/5 rounded-xl md:rounded-2xl border border-white/10 hover:border-accent/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 backdrop-blur-sm flex flex-col items-center justify-between"
                   >
-                    <div
-                      className={`w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-xl md:rounded-2xl bg-gradient-to-br ${partner.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                    >
-                      <span className="text-lg md:text-xl font-bold text-white">
-                        {partner.initial}
-                      </span>
+                    <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-xl md:rounded-2xl p-1.5 bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center shadow-lg group-hover:shadow-[var(--glow-gold)] group-hover:scale-110 group-hover:border-accent/60 transition-all duration-300">
+                      <partner.Logo className="w-full h-full object-contain drop-shadow" />
                     </div>
                     <h4 className="text-xs md:text-sm font-semibold text-white group-hover:text-accent transition-colors leading-tight">
                       {partner.name}
