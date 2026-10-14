@@ -83,7 +83,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Business Hours",
-      content: "Mon - Sat: 09:00 AM - 09:00 PM",
+      content: "Mon - Sat : 09:00 AM - 09:00 PM",
       action: null,
     },
   ];
