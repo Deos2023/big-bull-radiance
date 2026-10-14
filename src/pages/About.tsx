@@ -43,7 +43,7 @@ const About = () => {
   ];
 
   const achievements = [
-    { icon: Users, count: "250+", label: "Satisfied Clients" },
+    { icon: Users, count: "500+", label: "Satisfied Clients" },
     { icon: Award, count: "22+", label: "Years of Excellence" },
     { icon: TrendingUp, count: "50+", label: "Investment Plans" },
     { icon: Shield, count: "100+", label: "Health Policies" },
@@ -208,7 +208,7 @@ const About = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   Founded with a vision to make quality financial planning
                   accessible to everyone, Big Bull Investment has been serving
-                  the community for over 8 years. Led by Ujjal Biswas, our team
+                  the community for over 22 years. Led by Ujjal Biswas, our team
                   combines expertise in mutual funds and health insurance to
                   provide comprehensive financial solutions.
                 </p>
@@ -374,7 +374,7 @@ const About = () => {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-                    With over 8 years of experience in financial planning and
+                    With over 22 years of experience in financial planning and
                     investment management, Ujjal brings deep expertise in mutual
                     funds and health insurance. His client-first approach and
                     personalized strategies have helped countless families

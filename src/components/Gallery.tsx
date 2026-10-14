@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { 
   ChevronLeft, 
   ChevronRight, 
@@ -236,6 +236,12 @@ const Gallery = ({ limit, initialFilter = "all" }: GalleryProps) => {
         {/* Lightbox Dialog Modal */}
         <Dialog open={activeIndex !== null} onOpenChange={(open) => !open && setActiveIndex(null)}>
           <DialogContent className="max-w-4xl bg-black/95 backdrop-blur-2xl border border-primary/30 p-2 sm:p-4 overflow-hidden text-foreground">
+            <DialogTitle className="sr-only">
+              {activeItem?.title || "Gallery Media"}
+            </DialogTitle>
+            <DialogDescription className="sr-only">
+              {activeItem?.caption || activeItem?.title || "Gallery preview"}
+            </DialogDescription>
             {activeItem && (
               <div className="relative flex flex-col items-center justify-center min-h-[380px] md:min-h-[580px]">
                 {/* Media Player or Image */}

@@ -72,12 +72,18 @@ const Footer = () => {
               </a>
               <a
                 href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Big Bull Investment on Twitter"
                 className="w-10 h-10 bg-accent/10 hover:bg-accent/20 border border-accent/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[var(--glow-gold)] group"
               >
                 <Twitter className="w-4 h-4 text-accent group-hover:text-white transition-colors" />
               </a>
               <a
                 href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Big Bull Investment on Instagram"
                 className="w-10 h-10 bg-accent/10 hover:bg-accent/20 border border-accent/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[var(--glow-gold)] group"
               >
                 <Instagram className="w-4 h-4 text-accent group-hover:text-white transition-colors" />
@@ -168,10 +174,12 @@ const Footer = () => {
             </div>
 
             {/* CTA Button */}
-            <Button className="w-full mt-6 bg-accent hover:bg-accent/90 text-background font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[var(--glow-gold)]">
-              <Phone className="w-4 h-4 mr-2" />
-              Free Consultation
-            </Button>
+            <a href="tel:9088674067" className="block w-full">
+              <Button className="w-full mt-6 bg-accent hover:bg-accent/90 text-background font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[var(--glow-gold)]">
+                <Phone className="w-4 h-4 mr-2" />
+                Free Consultation
+              </Button>
+            </a>
           </div>
         </div>
 

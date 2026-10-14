@@ -189,9 +189,11 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name *</label>
+                  <label htmlFor="contact-name" className="block text-sm font-medium mb-2">Name *</label>
                   <Input 
+                    id="contact-name"
                     name="name"
+                    autoComplete="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Your full name" 
@@ -200,10 +202,12 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email *</label>
+                  <label htmlFor="contact-email" className="block text-sm font-medium mb-2">Email *</label>
                   <Input 
+                    id="contact-email"
                     type="email"
                     name="email"
+                    autoComplete="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="your.email@example.com" 
@@ -212,10 +216,12 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone *</label>
+                  <label htmlFor="contact-phone" className="block text-sm font-medium mb-2">Phone *</label>
                   <Input 
+                    id="contact-phone"
                     type="tel"
                     name="phone"
+                    autoComplete="tel"
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="Your phone number" 
@@ -224,8 +230,9 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message *</label>
+                  <label htmlFor="contact-message" className="block text-sm font-medium mb-2">Message *</label>
                   <Textarea 
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}

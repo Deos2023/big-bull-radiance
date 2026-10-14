@@ -37,7 +37,7 @@ const FloatingContactButtons: React.FC = () => {
   return (
     <div
       aria-label="Quick Contact Floating Actions"
-      className="fixed bottom-6 right-6 z-50 flex flex-col gap-3.5 items-end pointer-events-auto"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 sm:gap-3.5 items-end pointer-events-auto"
     >
       {/* WhatsApp Floating Action Button */}
       <a
@@ -56,8 +56,8 @@ const FloatingContactButtons: React.FC = () => {
         <span className="absolute -inset-1 rounded-full bg-[#25D366]/40 blur-sm animate-pulse group-hover:bg-[#25D366]/70" />
 
         {/* Real WhatsApp Button with Authentic Green & White Icon */}
-        <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-[#25D366]/50 border-2 border-white/30 transition-all duration-300 group-hover:bg-[#20ba5a]">
-          <OfficialWhatsAppIcon className="h-8 w-8 text-white drop-shadow" />
+        <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-[#25D366]/50 border-2 border-white/30 transition-all duration-300 group-hover:bg-[#20ba5a]">
+          <OfficialWhatsAppIcon className="h-6 w-6 sm:h-8 sm:w-8 text-white drop-shadow" />
         </div>
       </a>
 
@@ -76,8 +76,8 @@ const FloatingContactButtons: React.FC = () => {
         <span className="absolute -inset-1 rounded-full bg-blue-500/30 blur-sm animate-pulse group-hover:bg-blue-500/60" />
 
         {/* Call Button */}
-        <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-blue-700 via-blue-600 to-cyan-500 text-white shadow-2xl shadow-blue-600/50 border-2 border-white/30 transition-all duration-300">
-          <OfficialPhoneIcon className="h-6 w-6 text-white drop-shadow" />
+        <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-tr from-blue-700 via-blue-600 to-cyan-500 text-white shadow-2xl shadow-blue-600/50 border-2 border-white/30 transition-all duration-300">
+          <OfficialPhoneIcon className="h-5 w-5 sm:h-6 sm:w-6 text-white drop-shadow" />
         </div>
       </a>
     </div>

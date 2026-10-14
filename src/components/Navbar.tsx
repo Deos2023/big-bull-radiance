@@ -63,7 +63,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -71,7 +74,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
+          <div id="mobile-navigation" className="md:hidden py-4 animate-fade-in border-t border-border/50">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -86,7 +89,13 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent" onClick={()=>{navigate("/contact") }}>
+            <Button
+              className="w-full mt-4 bg-gradient-to-r from-primary to-accent"
+              onClick={() => {
+                setIsOpen(false);
+                navigate("/contact");
+              }}
+            >
               Get Started
             </Button>
           </div>

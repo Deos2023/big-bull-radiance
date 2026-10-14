@@ -10,7 +10,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { icon: Users, value: 250, label: "Satisfied Clients", suffix: "+" },
+  { icon: Users, value: 500, label: "Satisfied Clients", suffix: "+" },
   { icon: Calendar, value: 22, label: "Years of Experience", suffix: "+" },
   { icon: TrendingUp, value: 50, label: "Investment Plans Managed", suffix: "+" },
   { icon: Heart, value: 100, label: "Health Policies Secured", suffix: "+" },

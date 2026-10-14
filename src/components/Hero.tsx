@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Bull Silhouette - Responsive Sizing */}
-      <div className="absolute right-2 top-1/4 opacity-10 md:opacity-15 animate-pulse-glow md:right-10">
+      <div className="absolute right-2 top-1/4 opacity-10 md:opacity-15 animate-pulse-glow md:right-10 pointer-events-none">
         <TrendingUp
           className="w-48 h-48 md:w-96 md:h-96 text-accent"
           strokeWidth={0.5}
@@ -48,7 +48,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-28 pb-16 md:py-24">
         <div className="animate-fade-in-up">
           {/* Trust Badge - Mobile Optimized */}
           <div className="inline-flex items-center gap-2 mb-4 md:mb-6 mt-4 md:mt-10 px-4 py-2 md:px-6 md:py-3 bg-accent/10 rounded-full border border-accent/20 backdrop-blur-sm">

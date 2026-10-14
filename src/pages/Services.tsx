@@ -199,12 +199,18 @@ const Services = () => {
               Let's discuss your financial goals and create a personalized plan for your success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:shadow-[var(--glow-gold)] transition-all duration-300">
+              <Button
+                size="lg"
+                onClick={() => navigate("/contact")}
+                className="bg-gradient-to-r from-primary to-accent hover:shadow-[var(--glow-gold)] transition-all duration-300"
+              >
                 Schedule Consultation
               </Button>
-              <Button size="lg" variant="outline">
-                Call Now: 9088674067
-              </Button>
+              <a href="tel:9088674067" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full">
+                  Call Now: 9088674067
+                </Button>
+              </a>
             </div>
           </div>
         </div>
